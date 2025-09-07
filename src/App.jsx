@@ -12,6 +12,7 @@ import SeeProject from "./components/SeeProject"
 import HeroSection from "./components/HeroSection"
 import AboutSection from "./components/AboutSection"
 import ProjectSection from "./components/ProjectSection"
+import ContactSection from "./components/ContactSection"
 
 function App() {
 
@@ -44,6 +45,7 @@ function App() {
         <HeroSection />
         <AboutSection/>
         <ProjectSection/>
+        <ContactSection />
     </>
   )
 }

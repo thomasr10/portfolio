@@ -1,7 +1,7 @@
-function MainButton ({ children, onClick }) {
+function MainButton ({ children, onClick, type }) {
 
     return (
-        <button className="btn" onClick={onClick}>
+        <button className="btn" onClick={onClick} type={type}>
             { children }
             <div className="dot"></div>
         </button>

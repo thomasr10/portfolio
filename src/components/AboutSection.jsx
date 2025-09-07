@@ -6,6 +6,10 @@ import StackLabel from "./StackLabel";
 
 function AboutSection() {
 
+    function downloadResume () {
+        window.open('/CV/RIVOIRE_Thomas - CV.pdf','_blank')
+    }
+
     return (
         <section className="about-section">
             <div className="about-me raw-limit-size center">
@@ -15,7 +19,7 @@ function AboutSection() {
                 <p className="white-txt-regular">Cette formation me permettra de travailler sur des projets concrets en développement web, mobile, desktop et même jeux vidéo 2D/3D, mais aussi d’approfondir mes compétences en bases de données (SQL/NoSQL) et en gestion de systèmes d’information (DevOps, management de projet, travail en équipe).</p>
                 <p className="white-txt-regular-low">Curieux et motivé, je recherche activement une alternance qui me permettra de mettre en pratique mes compétences techniques, de contribuer à des projets réels et de continuer à progresser aux côtés de professionnels expérimentés.</p>
                 <div className="btn-container">
-                    <MainButton children={"Télécharger mon CV"} />
+                    <MainButton type={'button'} children={"Télécharger mon CV"} onClick={downloadResume}/>
                     <SocialsButton link={'https://github.com/thomasr10'}>
                         <FontAwesomeIcon icon={faGithub} />
                     </SocialsButton>

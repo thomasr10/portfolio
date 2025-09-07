@@ -17,7 +17,7 @@ function HeroSection() {
                         <p>Développeur web & mobile en formation, je recherche une alternance pour mettre mes compétences au service de projets concrets</p>
                     </div>
                     <div className="btn-container">
-                        <MainButton children={"Me contacter"} />
+                        <MainButton children={"Me contacter"} type={'button'}/>
                         <SocialsButton link={'https://github.com/thomasr10'}>
                             <FontAwesomeIcon icon={faGithub} />
                         </SocialsButton>
