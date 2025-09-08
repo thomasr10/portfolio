@@ -133,6 +133,8 @@ input {
   --black-1: #191919;
   --black-2: #222222;
   --black-hover: #3B3B3B;
+  --gray: #E4E4E9;
+  --gray-2: #6B7280;
   --primary-purple: #7050ff;
   --hover-purple: #8367FF;
   --dark-blue: #1B1B20;
@@ -355,6 +357,7 @@ h2 {
   color: var(--white-2);
   font-family: var(--montserrat-medium);
   margin-top: 16px;
+  line-height: 1.2rem;
 }
 .hero .presentation .btn-container {
   margin-top: 16px;
@@ -394,6 +397,7 @@ h2 {
 }
 .about-section p {
   margin-top: 16px;
+  line-height: 1.2rem;
 }
 .about-section .white-txt-medium {
   margin-top: 64px;
@@ -425,6 +429,7 @@ h2 {
 }
 .project-section h2 {
   text-align: center;
+  margin-bottom: 64px;
 }
 
 .contact-section {
@@ -496,4 +501,140 @@ h2 {
 
 .mt-32 {
   margin-top: 32px;
+}
+
+.one-project-container {
+  display: flex;
+  flex-direction: column;
+}
+.one-project-container .img-section {
+  padding: 40px 12px;
+  background-color: var(--gray);
+  border-radius: 12px 12px 0 0;
+}
+.one-project-container .img-section .img-container {
+  background-color: var(--dark-blue);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 260px;
+}
+.one-project-container .img-section .img-container figure {
+  width: 100%;
+}
+.one-project-container .img-section .img-container figure img {
+  width: 100%;
+  display: block;
+}
+.one-project-container .txt-section {
+  background-color: var(--white-1);
+  padding: 24px 16px;
+  border-radius: 0 0 12px 12px;
+}
+.one-project-container .txt-section h3 {
+  color: var(--black-1);
+  font-size: 1rem;
+  font-family: var(--montserrat-semibold);
+}
+.one-project-container .txt-section p {
+  line-height: 1.2rem;
+  font-family: var(--montserrat-medium);
+  margin-top: 16px;
+}
+.one-project-container .txt-section h3,
+.one-project-container .txt-section h4 {
+  text-transform: uppercase;
+}
+.one-project-container .txt-section p,
+.one-project-container .txt-section li {
+  color: var(--gray-2);
+  font-size: 0.88rem;
+}
+.one-project-container .txt-section h4 {
+  margin-top: 24px;
+}
+.one-project-container .txt-section .subtitle,
+.one-project-container .txt-section h4 {
+  color: var(--black-1);
+  font-size: 0.88rem;
+  font-family: var(--montserrat-medium);
+}
+.one-project-container .txt-section .features {
+  margin-top: 24px;
+}
+.one-project-container .txt-section .features ul {
+  padding-left: 24px;
+  padding-top: 8px;
+}
+.one-project-container .txt-section .features li {
+  list-style-type: disc;
+  line-height: 1.5rem;
+  font-family: var(--montserrat-regular);
+}
+.one-project-container .txt-section .role {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+.one-project-container .txt-section .role .span {
+  color: var(--gray-2);
+  font-size: 0.88rem;
+  font-family: var(--montserrat-regular);
+}
+.one-project-container .txt-section .stack {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+.one-project-container .txt-section .stack .stack-list {
+  display: flex;
+  gap: 8px;
+}
+.one-project-container .txt-section .link-container {
+  margin-top: 48px;
+}
+.one-project-container hr {
+  border: none;
+  border-top: 1px dashed var(--gray-2);
+  height: 1px;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.slider {
+  overflow: hidden;
+}
+.slider .slides {
+  display: flex;
+  transition: transform ease 0.4s;
+}
+.slider .slides .one-project-container {
+  width: 100%;
+  flex: 0 0 100%;
+  padding: 0.5rem;
+}
+.slider .change-slide-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+.slider .change-slide-container .dot-container {
+  display: flex;
+  gap: 15px;
+}
+.slider .change-slide-container .dot-container .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transition: background-color ease 0.4s;
+}
+.slider .change-slide-container .dot-container .is-active {
+  background: var(--primary-purple);
+}
+.slider .change-slide-container .dot-container .is-not-active {
+  background-color: var(--black-hover);
 }/*# sourceMappingURL=style.css.map */

@@ -1,7 +1,7 @@
-function SliderArrow ({ children }) {
+function SliderArrow ({ children, onClick }) {
 
     return (
-        <div className="arrow-container">
+        <div className="arrow-container" onClick={onClick}>
             { children }
         </div>
     )

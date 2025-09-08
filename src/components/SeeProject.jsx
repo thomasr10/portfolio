@@ -5,7 +5,7 @@ function SeeProject ({ link }) {
 
     return (
         <div className="link-container">
-            <a href={link}>Voir sur GitHub</a>
+            <a href={link} target="blank">Voir sur GitHub</a>
             <FontAwesomeIcon icon={faGithub} className="icon"/>
         </div>
     )
