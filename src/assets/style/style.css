@@ -532,6 +532,9 @@ h2 {
   padding: 24px 16px;
   border-radius: 0 0 12px 12px;
 }
+.one-project-container .txt-section .description {
+  height: 84px;
+}
 .one-project-container .txt-section h3 {
   color: var(--black-1);
   font-size: 1rem;
@@ -566,6 +569,7 @@ h2 {
 .one-project-container .txt-section .features ul {
   padding-left: 24px;
   padding-top: 8px;
+  height: 208px;
 }
 .one-project-container .txt-section .features li {
   list-style-type: disc;
@@ -631,6 +635,11 @@ h2 {
   height: 12px;
   border-radius: 50%;
   transition: background-color ease 0.4s;
+  transition: opacity ease 0.2s;
+}
+.slider .change-slide-container .dot-container .dot:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 .slider .change-slide-container .dot-container .is-active {
   background: var(--primary-purple);

@@ -21,7 +21,7 @@ function OneProject({ id, imgPath, title, description, features, role, stacks, l
             <div className="txt-section">
                 <div className="about-project">
                     <h3>{title}</h3>
-                    <p>{description}</p>
+                    <p className="description">{description}</p>
                 </div>
                 <div className="informations">
                     <h4>Informations</h4>

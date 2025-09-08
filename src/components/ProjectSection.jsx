@@ -87,7 +87,7 @@ function ProjectSection() {
                     {
                         id: 6,
                         imgPath: "/img/Mockup Pokemon.png",
-                        title: "Développement de PokéBooster - Jeu d'ouverture de booster",
+                        title: "PokéBooster - Jeu d'ouverture de booster",
                         description: "Poke Booster est un projet personnel en cours de développement permettant de simuler l’ouverture de boosters Pokémon en s’appuyant sur la Pokemon TCG API.",
                         features: ['Récupération des cartes via l’API Pokemon TCG', 'Gestion de la progression et du niveau du joueur', 'Simulation d’ouverture de boosters avec affichage des cartes'],
                         role: 'Full-Stack Developer',
@@ -113,7 +113,7 @@ function ProjectSection() {
                         link: 'https://github.com/thomasr10/ECF-1'
                     },
                     {
-                        id: 7,
+                        id: 8,
                         imgPath: "/img/Mockup HypnoSys.png",
                         title: "HypnoSys - Développement d'une landing page fictive",
                         description: "Développement d’une landing page pour HypnoSys, un produit fictif imaginant un casque capable de contrôler les rêves.",
