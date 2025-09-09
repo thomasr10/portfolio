@@ -119,17 +119,17 @@ input {
 
 @font-face {
     font-family: 'Montserrat-Medium';
-    src: url('/public/fonts/Montserrat-Medium.ttf');
+    src: url('/fonts/Montserrat-Medium.ttf');
 }
 
 @font-face {
     font-family: 'Montserrat-Regular';
-    src: url('/public/fonts/Montserrat-Regular.ttf');
+    src: url('/fonts/Montserrat-Regular.ttf');
 }
 
 @font-face {
     font-family: 'Montserrat-SemiBold';
-    src: url('/public/fonts/Montserrat-SemiBold.ttf');
+    src: url('/fonts/Montserrat-SemiBold.ttf');
 }
 
 :root {
@@ -141,6 +141,7 @@ input {
     --black-hover: #3B3B3B;
     --gray: #E4E4E9;
     --gray-2: #6B7280;
+    --loader-bg: #00000036;
 
     --primary-purple: #7050ff;
     --hover-purple: #8367FF;
@@ -213,6 +214,84 @@ h2 {
 .center {
     margin: 0 auto;
 }
+
+@keyframes spinner1 {
+    0% {
+        transform: rotate(0deg);
+        border-width: 10px;
+    }
+
+    50% {
+        transform: rotate(180deg);
+        border-width: 1px;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        border-width: 10px;
+    }
+}
+
+@keyframes spinner2 {
+    0% {
+        transform: rotate(0deg);
+        border-width: 1px;
+    }
+
+    50% {
+        transform: rotate(180deg);
+        border-width: 10px;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        border-width: 1px;
+    }
+}
+
+.loader-bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background-color: var(--black-1);
+    opacity: .8;
+    z-index: 999999;
+
+    .loader-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .loader {
+            position: relative;
+            width: 84px;
+            height: 84px;
+
+            div {
+                position: absolute;
+                box-sizing: border-box;
+                width: 100%;
+                height: 100%;
+                border: 10px solid transparent;
+                border-top-color: var(--primary-purple);
+                border-radius: 50%;
+                animation: spinner1 1.3s linear infinite;
+
+                &:nth-child(2) {
+                    border: 10px solid transparent;
+                    border-bottom-color: var(--primary-purple);
+                    animation: spinner2 1.3s linear infinite;
+
+                }
+            }
+
+        }
+    }
+
+}
+
 
 .btn {
     border: none;
@@ -398,7 +477,8 @@ h2 {
             color: var(--white-2);
             font-family: var(--montserrat-medium);
             margin-top: 16px;
-            line-height: 1.2rem
+            line-height: 1.2rem;
+            font-size: 1rem;
         }
 
         .btn-container {
@@ -456,7 +536,7 @@ h2 {
     .btn-container {
         margin-top: 48px;
         display: flex;
-        justify-content: space-between;
+        gap: 12px;
     }
 
     .competences {
@@ -526,9 +606,9 @@ h2 {
     }
 
     .form-container {
-        
+
         .msg-container {
-            margin-top: 24px ;
+            margin-top: 24px;
             padding: 16px;
             background-color: lightgreen;
             border: solid 2px green;
@@ -538,6 +618,7 @@ h2 {
             font-size: 1rem;
             font-family: var(--montserrat-medium);
         }
+
         .input-container {
             display: flex;
             flex-direction: column;
@@ -623,6 +704,7 @@ h2 {
         .description {
             height: 84px;
         }
+
         h3 {
             color: var(--black-1);
             font-size: 1rem;
@@ -722,6 +804,7 @@ h2 {
     .slides {
         display: flex;
         transition: transform ease .4s;
+
         .one-project-container {
             width: 100%;
             flex: 0 0 100%;
@@ -746,6 +829,7 @@ h2 {
                 border-radius: 50%;
                 transition: background-color ease .4s;
                 transition: opacity ease .2s;
+
                 &:hover {
                     cursor: pointer;
                     opacity: .8;
@@ -762,4 +846,39 @@ h2 {
 
         }
     }
+}
+
+@media (min-width: 768px) {
+    .raw-limit-size {
+        max-width: 700px;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    p {
+        font-size: 1.13rem;
+    }
+
+    .btn {
+        height: 50px;
+        padding: 0 24px;
+    }
+
+    .hero {
+
+        h1,
+        p {
+            text-align: center;
+        }
+        .presentation {
+            .btn-container {
+                margin-top: 32px;
+                justify-content: center;
+            }
+            
+        }
+    }
+
 }
