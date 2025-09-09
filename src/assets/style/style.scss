@@ -526,6 +526,18 @@ h2 {
     }
 
     .form-container {
+        
+        .msg-container {
+            margin-top: 24px ;
+            padding: 16px;
+            background-color: lightgreen;
+            border: solid 2px green;
+            border-radius: 12px;
+
+            color: var(--black-1);
+            font-size: 1rem;
+            font-family: var(--montserrat-medium);
+        }
         .input-container {
             display: flex;
             flex-direction: column;

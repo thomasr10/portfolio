@@ -464,6 +464,16 @@ h2 {
 .contact-section a:hover {
   cursor: pointer;
 }
+.contact-section .form-container .msg-container {
+  margin-top: 24px;
+  padding: 16px;
+  background-color: lightgreen;
+  border: solid 2px green;
+  border-radius: 12px;
+  color: var(--black-1);
+  font-size: 1rem;
+  font-family: var(--montserrat-medium);
+}
 .contact-section .form-container .input-container {
   display: flex;
   flex-direction: column;

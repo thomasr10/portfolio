@@ -1,17 +1,41 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MainButton from "./MainButton";
 
-function ContactSection () {
+function ContactSection() {
 
     const [name, setName] = useState('');
-    const [mail, setMail] = useState('');
+    const [emailFrom, setEmailFrom] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
-    
-    function sendEmail () {
-        alert(`${name}, ${mail}, ${subject}, ${message}`)
-    }
+    const [emailConfirmation, setEmailConfirmation] = useState('');
 
+    useEffect(() => {
+        emailjs.init({
+            publicKey: "d0AyWLJ347Xr-qivJ",
+        });
+    }, []);
+
+    function sendEmail(e) {
+        e.preventDefault();
+        const params = {
+            name: name,
+            subject: subject,
+            message: message,
+            emailFrom: emailFrom
+        }
+
+        emailjs.send("service_wk090tv", "template_1t7f6n1", params).
+            then(() => {
+                setEmailConfirmation('Email envoyé avec succès');
+                setName('');
+                setEmailFrom('');
+                setSubject('');
+                setMessage('');
+            })
+            .catche(() => {
+                setEmailConfirmation('Problème survenue à l\'envoie de l\'email');
+            });
+    }
     return (
         <section className="contact-section">
             <div className="raw-limit-size center">
@@ -22,23 +46,28 @@ function ContactSection () {
                 </div>
                 <div className="form-container">
                     <form onSubmit={sendEmail}>
+                        {
+                            (emailConfirmation !== '') && (
+                                <div className="msg-container">{emailConfirmation}</div>
+                            )
+                        }
                         <div className="input-container mt-32">
                             <label htmlFor="name">Prénom et Nom</label>
-                            <input type="text" name="name" id="name" required placeholder="Prénom et Nom" onChange={(e) => { setName(e.target.value)}}/>
+                            <input type="text" name="name" id="name" required placeholder="Prénom et Nom" value={name} onChange={(e) => { setName(e.target.value) }} />
                         </div>
                         <div className="input-container mt-24">
                             <label htmlFor="mail">Adresse email</label>
-                            <input type="mail" name="mail" id="mail" required placeholder="Adresse email" onChange={(e) => { setMail(e.target.value)}}/>
+                            <input type="mail" name="mail" id="mail" required placeholder="Adresse email" value={emailFrom} onChange={(e) => { setEmailFrom(e.target.value) }} />
                         </div>
                         <div className="input-container mt-24">
                             <label htmlFor="subject">Sujet</label>
-                            <input type="text" name="subject" id="subject" required placeholder="Sujet" onChange={(e) => { setSubject(e.target.value)}}/>
+                            <input type="text" name="subject" id="subject" required placeholder="Sujet" value={subject} onChange={(e) => { setSubject(e.target.value) }} />
                         </div>
                         <div className="input-container mt-24">
                             <label htmlFor="message">Message</label>
-                            <textarea name="message" id="message" required placeholder="Message" onChange={(e) => { setMessage(e.target.value)}}></textarea>
+                            <textarea name="message" id="message" required placeholder="Message" value={message} onChange={(e) => { setMessage(e.target.value) }}></textarea>
                         </div>
-                        <MainButton children={"Envoyer"} type={'submit'}/>
+                        <MainButton children={"Envoyer"} type={'submit'} />
                     </form>
                 </div>
             </div>
