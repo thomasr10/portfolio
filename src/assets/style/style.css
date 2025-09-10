@@ -697,7 +697,7 @@ h2 {
 .one-project-container .txt-section .features ul {
   padding-left: 24px;
   padding-top: 8px;
-  height: 208px;
+  min-height: 208px;
 }
 .one-project-container .txt-section .features li {
   list-style-type: disc;
@@ -709,6 +709,7 @@ h2 {
   justify-content: space-between;
   align-items: center;
   margin-top: 24px;
+  gap: 1rem;
 }
 .one-project-container .txt-section .role .span {
   color: var(--gray-2);
