@@ -594,6 +594,7 @@ h2 {
         .labels-container {
             display: flex;
             gap: 16px;
+            flex-wrap: wrap;
         }
     }
 }
