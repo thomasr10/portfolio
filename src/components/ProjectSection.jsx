@@ -46,10 +46,10 @@ function ProjectSection() {
                     {
                         id: 3,
                         imgPath: "/img/Mockup Lutopia.png",
-                        title: "Lutopia - Application de gestion de librairie pour enfants",
+                        title: "Lutopia - Application de gestion de librairie",
                         description: "Réalisé en groupe, ce projet m’a permis d’occuper le rôle de lead developer et de contribuer activement à la partie back-end avec PHP, JavaScript et MySQL.",
                         features: ['Système d’authentification avec vérification par mail', 'Emprunt de livres', 'Interface admin pour la gestion des utilisateurs et du catalogue de livres'],
-                        role: 'Lead Developer & Back-End Developer',
+                        role: 'Lead & Back-End Developer',
                         stacks: [
                             { id: 'symfony', icon: faPhp },
                             { id: 'javascript', icon: faJs },
@@ -75,7 +75,7 @@ function ProjectSection() {
                     {
                         id: 5,
                         imgPath: "/img/Mockup Comet Fall Game.png",
-                        title: "Développement de Comet Fall Game - Jeu Vidéo en Python",
+                        title: "Développement de Comet Fall Game - Jeu Vidéo",
                         description: "Comet Fall est un projet réalisé pour apprendre Python à travers la création d’un petit jeu. Le joueur doit esquiver des comètes qui tombent du ciel.",
                         features: ['Déplacement du joueur.', 'Gestion des collisions avec les comètes.', 'Gestion des dégâts et des points de vie'],
                         role: 'Full-Stack Developer',
@@ -87,7 +87,7 @@ function ProjectSection() {
                     {
                         id: 6,
                         imgPath: "/img/Mockup Pokemon.png",
-                        title: "PokéBooster - Jeu d'ouverture de boosters Pokémon",
+                        title: "PokéBooster - Jeu d'ouverture de boosters",
                         description: "Poke Booster est un projet personnel en cours de développement permettant de simuler l’ouverture de boosters Pokémon en s’appuyant sur la Pokemon TCG API.",
                         features: ['Récupération des cartes via l’API Pokemon TCG', 'Gestion de la progression et du niveau du joueur', 'Simulation d’ouverture de boosters avec affichage des cartes'],
                         role: 'Full-Stack Developer',

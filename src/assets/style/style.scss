@@ -307,7 +307,7 @@ h2 {
     align-items: center;
     gap: 14px;
     transition: background-color ease-in .2s;
-    padding: 0 24px;
+    padding: 0 20px;
 
     &:hover {
         cursor: pointer;
@@ -356,6 +356,7 @@ h2 {
 
     &:hover {
         font-size: 36px; // 40 px desktop
+        
     }
 }
 
@@ -368,6 +369,50 @@ h2 {
         font-size: 32px; // 40 px desktop
     }
 
+}
+
+.html {
+    transition: color ease .2s;
+    &:hover {
+        color: #F54927;;
+    }
+}
+.css {
+    transition: color ease .2s;
+    &:hover {
+        color: #1572B6;
+    }
+}
+.js {
+    transition: color ease .2s;
+    &:hover {
+        color: #F7DF1E;
+    }
+}
+.react {
+    transition: color ease .2s;
+    &:hover {
+        color: #61DAFB;
+    }
+}
+
+.vue {
+    transition: color ease .2s;
+    &:hover {
+        color: #42B883;
+    }
+}
+.sass {
+    transition: color ease .2s;
+    &:hover {
+        color: #CC6699;
+    }
+}
+.python {
+    transition: color ease .2s;
+    &:hover {
+        color: #CC6699;
+    }
 }
 
 .stack-tag-container,
@@ -542,6 +587,10 @@ h2 {
     .competences {
         margin-top: 64px;
 
+        .container {
+            margin-top: 64px;
+        }
+
         .labels-container {
             display: flex;
             gap: 16px;
@@ -672,7 +721,7 @@ h2 {
     flex-direction: column;
 
     .img-section {
-        padding: 40px 12px;
+        padding: 48px 12px;
         background-color: var(--gray);
         border-radius: 12px 12px 0 0;
 
@@ -682,7 +731,6 @@ h2 {
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 260px;
 
             figure {
                 width: 100%;
@@ -862,8 +910,18 @@ h2 {
     }
 
     .btn {
-        height: 50px;
-        padding: 0 24px;
+        height: 48px;
+        padding: 0 32px;
+    }
+
+    .socials-container {
+        width: 48px;
+        height: 48px;
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
     }
 
     .hero {
@@ -872,13 +930,197 @@ h2 {
         p {
             text-align: center;
         }
+
         .presentation {
             .btn-container {
                 margin-top: 32px;
                 justify-content: center;
             }
-            
+
         }
     }
+
+    .stack-tag-container {
+        width: 56px;
+        height: 56px;
+        font-size: 2rem;
+
+        &:hover {
+            font-size: 2.5rem;
+        }
+    }
+
+    .competences {
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+
+            .mt-16 {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .one-project-container {
+        .txt-section {
+
+            h3 {
+                font-size: 1.25rem;
+                min-height: 1.25rem;
+            }
+
+            p,
+            h4,
+            .subtitle,
+            li {
+                font-size: 1rem;
+            }
+
+            .features {
+
+                li {
+                    line-height: 2.25rem;
+
+
+                }
+            }
+        }
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .raw-limit-size {
+        max-width: 884px;
+    }
+
+    .white-txt-regular,
+    .white-txt-regular-low {
+        font-size: 1rem;
+    }
+
+    .white-txt-medium {
+        font-size: 1.125rem;
+    }
+
+}
+.contact-section {
+
+    .form-container {
+        
+        .msg-container {
+            margin-bottom: 24px;
+            margin-top: 0;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .raw-limit-size {
+        max-width: 1000px;
+    }
+
+    .hero {
+        h1 {
+            margin: 0 auto;
+            max-width: 600px;
+        }
+
+        p {
+            margin: 32px auto;
+            max-width: 800px;
+        }
+    }
+
+    .about-section {
+
+        .competences {
+            margin-top: 0;
+        }
+
+    }
+
+    .about-section-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 6rem;
+    }
+
+    .about-section {
+
+        .about-me {
+            width: 100%;
+        }
+
+        .competences {
+            margin-top: 0;
+            width: 100%;
+
+            .container {
+                justify-content: flex-start;
+            }
+        }
+
+    }
+
+    .one-project-container {
+        flex-direction: row;
+
+        .img-section {
+            border-radius: 12px 0 0 12px;
+            width: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .txt-section {
+            border-radius: 0 12px 12px 0;
+        }
+    }
+
+    .contact-container {
+        display: flex;
+        gap: 3rem;
+
+        .contact-infos {
+            width: 100%;
+
+            h2 {
+                font-size: 2.25rem
+            }
+        }
+
+        .form-container {
+            width: 100%;
+
+            form {
+                .mt-32 {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+
+}
+
+@media (min-width: 1400px) {
+    .raw-limit-size {
+        max-width: 1200px;
+    }
+
+    .hero {
+
+        .glare {
+            width: 480px;
+            height: 600px;
+            filter: blur(100px);
+        }
+    }
+
+
 
 }
