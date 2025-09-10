@@ -751,7 +751,7 @@ h2 {
 
 
         .description {
-            height: 84px;
+            min-height: 84px;
         }
 
         h3 {
@@ -825,10 +825,13 @@ h2 {
             justify-content: space-between;
             align-items: center;
             margin-top: 24px;
+            flex-wrap: wrap;
+            gap: .5rem;
 
             .stack-list {
                 display: flex;
                 gap: 8px;
+                flex-wrap: wrap;
             }
         }
 
@@ -866,11 +869,14 @@ h2 {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 16px;
+        margin-top: 16px;  
+        gap: .5rem;
 
         .dot-container {
             display: flex;
             gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
 
             .dot {
                 width: 12px;

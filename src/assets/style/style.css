@@ -661,7 +661,7 @@ h2 {
   border-radius: 0 0 12px 12px;
 }
 .one-project-container .txt-section .description {
-  height: 84px;
+  min-height: 84px;
 }
 .one-project-container .txt-section h3 {
   color: var(--black-1);
@@ -720,10 +720,13 @@ h2 {
   justify-content: space-between;
   align-items: center;
   margin-top: 24px;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 .one-project-container .txt-section .stack .stack-list {
   display: flex;
   gap: 8px;
+  flex-wrap: wrap;
 }
 .one-project-container .txt-section .link-container {
   margin-top: 48px;
@@ -753,10 +756,13 @@ h2 {
   justify-content: space-between;
   align-items: center;
   margin-top: 16px;
+  gap: 0.5rem;
 }
 .slider .change-slide-container .dot-container {
   display: flex;
   gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .slider .change-slide-container .dot-container .dot {
   width: 12px;
