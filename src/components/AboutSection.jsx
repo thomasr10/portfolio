@@ -15,7 +15,7 @@ function AboutSection() {
             <div className="raw-limit-size center about-section-container">
                 <div className="about-me">
                     <h2>À propos de moi</h2>
-                    <p className="white-txt-medium">Développeur web & mobile en formation, je recherche une alternance pour mettre mes compétences au service de projets concrets</p>
+                    <p className="white-txt-medium">Développeur Web & Web Mobile en formation, je recherche une alternance pour mettre mes compétences au service de projets concrets</p>
                     <p className="white-txt-regular">Je m’appelle Thomas Rivoire, étudiant en développement web et mobile. Après avoir acquis les bases du développement front-end et back-end, je poursuis mon parcours en intégrant un Bachelor 3 Développement afin de consolider mes compétences et d’élargir mes connaissances.</p>
                     <p className="white-txt-regular">Cette formation me permettra de travailler sur des projets concrets en développement web, mobile, desktop et même jeux vidéo 2D/3D, mais aussi d’approfondir mes compétences en bases de données (SQL/NoSQL) et en gestion de systèmes d’information (DevOps, management de projet, travail en équipe).</p>
                     <p className="white-txt-regular-low">Curieux et motivé, je recherche activement une alternance qui me permettra de mettre en pratique mes compétences techniques, de contribuer à des projets réels et de continuer à progresser aux côtés de professionnels expérimentés.</p>

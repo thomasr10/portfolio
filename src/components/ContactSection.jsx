@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import MainButton from "./MainButton";
 import Loader from "./Loader";
 
-function ContactSection() {
+function ContactSection({ ref }) {
 
     const [name, setName] = useState('');
     const [emailFrom, setEmailFrom] = useState('');
@@ -43,7 +43,7 @@ function ContactSection() {
     return (
         <>
 
-            <section className="contact-section">
+            <section className="contact-section" ref={ref}>
                 <div className="raw-limit-size center">
                     <div className="contact-container">
 

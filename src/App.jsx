@@ -13,39 +13,24 @@ import HeroSection from "./components/HeroSection"
 import AboutSection from "./components/AboutSection"
 import ProjectSection from "./components/ProjectSection"
 import ContactSection from "./components/ContactSection"
+import { useRef } from "react";
 
 function App() {
 
+  const contactRef = useRef(null);
+
+  function goToContact() {
+    contactRef.current?.scrollIntoView({
+      behavior: 'smooth'
+    })
+  }
 
   return (
     <>
-      {/* <div className="btn-container">
-
-        <MainButton children={'Me contacter'} />
-
-        <SocialsButton link={'https://www.linkedin.com/in/thomas-rivoire-843916192/'}>
-          <FontAwesomeIcon icon={faLinkedinIn} />
-        </SocialsButton>
-
-        <StackTag stackName={"React"}>
-          <FontAwesomeIcon icon={faReact} />
-        </StackTag>
-
-        <StackLabel children={"HTML"}/>
-      </div> */}
-
-        {/* <SliderArrow>
-          <FontAwesomeIcon icon={faArrowRight}/>
-        </SliderArrow>
-        <SliderArrow>
-          <FontAwesomeIcon icon={faArrowLeft}/>
-        </SliderArrow> */}
-
-        {/* <SeeProject link={"#"}/> */}
-        <HeroSection />
+        <HeroSection btnFunction={goToContact}/>
         <AboutSection/>
         <ProjectSection/>
-        <ContactSection />
+        <ContactSection ref={contactRef}/>
     </>
   )
 }
